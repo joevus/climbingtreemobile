@@ -1,0 +1,293 @@
+body {
+	margin: 0;
+}
+.wrap {
+	position: absolute;
+	left: 50%;
+}
+#board {
+	display: block;
+	position: relative;
+	left:-50%;
+	border: 1px solid black;
+}
+.topTopic{
+	position: absolute;
+	text-align: center;
+	left: -50%;
+	margin-left: 10px;
+	width: 355px;
+	margin-top: 20px;
+	border: 1px black solid;
+	border-radius: 10px;
+}
+
+
+
+#main {
+	
+}
+.title {
+	position: absolute;
+	text-align: center;
+	max-width: 400px;
+	top: 40px;
+	left: 0; right: 0;
+	font-size: 4em;
+	font-weight: normal;
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	z-index: 1;
+}
+.topwrap {
+	min-width: 800px;
+	max-width: 800px;
+	position: relative;
+	margin: auto;
+}
+.header {
+	background-color: #809878;
+	height: 300px;
+	position: relative;
+}
+.banner {
+	position: absolute;
+	width: 436px;
+    height: 300px;
+    left: 400px; right: 0;
+    top: -40px;
+    /*opacity: .8;*/
+}
+.bottomwrap {
+	font-family: 'Open Sans', sans-serif;
+	position:relative;
+	/*margin-left: auto;
+	margin-right: auto;*/
+	/*margin: auto;*/
+	margin-left: 10px; margin-right: 10px;
+	/*padding-left:40px; padding-right:40px;*/
+}
+.intro {
+	margin: 30px;
+	margin-left: auto; margin-right: auto;
+	max-width:850px;
+	min-width:750px;
+}
+.introleft {
+	float: left;
+	width:420px;
+}
+.introleft li {
+	max-width:400px;
+}
+.introright {
+	float: right;
+	position: relative;
+	right:5%;
+	/*margin-left:1%;*/
+	/*padding-left:7px; padding-right:4px;*/
+	padding-left:6px; padding-right:6px;
+	padding-top: 8px; padding-bottom:8px;
+	width: 255px;
+	border-style: solid;
+	border-width: 3px;
+	border-color: #809878;
+	border-radius: 4px;
+	font-size:.9em;
+	/*text-align: justify;*/
+}
+form {
+	clear: both;
+	margin-top: 275px;
+	margin-left: auto; margin-right: auto;
+	/*text-align: center;*/
+	width:600px;
+}
+form, form input, form label, form div, form select, form textarea {
+	box-sizing: border-box;
+}
+
+/*class ns stands for "not submit"--not the submit button*/
+form input.ns, form textarea, form select {
+	width:100%;
+	border: none;
+	outline: none;
+	padding-left: 5px;
+	background-color: #E5E5E5;
+	border-radius: 3px;
+	/*prevent background color bleed into rounded corners*/
+	/*background-clip: padding-box;*/
+}
+form input.ns, form label /*form option,*/ {
+	line-height: 27px;
+	height: 27px;
+	/*display: inline-block;*/
+}
+form textarea {
+	height: 78px;
+	/*padding-bottom: 0;*/
+}
+form label {
+	color: #555555;
+	font-size:13px;
+	font-weight: bold;
+	padding-left:10px;
+}
+form select {
+	padding-left: 10px;
+	height: 29px;
+	line-height: 29px;
+}
+.inline {
+	display: inline-block;
+	border: 1px solid #909090;
+	border-radius: 3px;
+	margin: 2px;
+}
+div.col-nam.inline {
+	border: none;
+	margin: none;
+}
+.row {
+	border: 1px solid #909090;
+	border-radius: 3px;
+	margin-top: 2px; margin-bottom: 2px; margin-right: 2px;
+	display: inline-block;
+	width: 100%;
+}
+.col-top {
+	width: 31%;
+}
+.col-res {
+	width: 66%;
+}
+.col-nam {
+	width: 38%;
+}
+.col-rec {
+	width: 59%;
+}
+#submit{
+	display: block;
+	cursor: pointer;
+	margin-left: auto; margin-right: auto;
+	margin-top:5px;
+	width: 260px;
+	height: 30px;
+}
+table{
+	margin-top: 60px; margin-bottom: 60px;
+	margin-left: auto; margin-right: auto;
+	width: 950px;
+	/*border-color: black;*/
+	border-collapse: separate;
+	border-spacing: 0;
+	/*border-left: 1px solid black;*/
+/*	border-top: 1px solid black;*/
+	/*border-top-left-radius: 3px;*/
+}
+/*table,*/ th, td {
+	border: 1px solid black;
+	border-style: none solid solid none;
+}
+td {
+	max-width: 300px;
+	min-width: 50px;
+	font-size: .9em;
+	padding: 6px;
+	overflow: auto;
+}
+td.container { height: 50px;}
+td.container > div {
+	width: 100%;
+	max-height: 120px;
+	overflow: hidden;
+}
+
+td:first-child {
+	border-left: 1px solid black;
+	width: 260px;
+}
+td:nth-child(2) {
+	width: 80px;
+}
+td:nth-child(3) {
+	width: 120px;
+	max-width: 140px;
+}
+td:nth-child(4) {
+	width: 120px;
+	max-width: 140px;
+}
+td:nth-child(5) {
+	width: 280px;
+	max-width: 280px;
+}
+td:nth-child(6) {
+	width: 70px;
+	max-width: 90px;
+}
+thead td{
+	/*colors in gradient from uigradients.com/#Parklife */
+	/*background: linear-gradient(0deg, #7B920A, #ADD100);*/
+	/*colors in gradient from http://www.csstablegenerator.com/*/
+	background: linear-gradient(0deg, #003f7f, #005fbf);
+	/*background-color: #555555;*/
+	/*-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;*/
+	border-top: 1px solid black;
+	color: white;
+	font-size: 1.1em;
+	padding: 8px;
+	/*border-radius: 5px;*/
+}
+
+thead td:first-child {
+	border-top-left-radius: 10px;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+thead td:last-child {
+	/*background-color: blue;*/
+	/*prevent background color 'bleeding' through rounded corners*/
+	/*may need to add to other selectors of table cells on corners*/
+	border-top-right-radius: 10px;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+/*changing this to scripting class so appended rows are rounded*/
+/*tr:last-child td:first-child {
+	border-bottom-left-radius: 10px;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+tr:last-child td:last-child {
+	border-bottom-right-radius: 10px;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}*/
+.bottomleft {
+	border-bottom-left-radius: 10px;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+.bottomright {
+	border-bottom-right-radius: 10px;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+tr:nth-child(2n) td{
+	background-color: #F6FFEE;
+	/*#E4F6D3*/
+}
+tr:nth-child(2n+1) td{
+	background-color: #B9C3CA;
+	/*#b2b2b2*/
+}
