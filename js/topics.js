@@ -6,18 +6,19 @@ for(var prop in treeData.bigBr[1].medBr) {
 	}
 }
 
-//create topic boxes for med branches under Science
-//	 variables we need
+//** Topic boxes under Science **
 
+//variables we need
 var topTpL = 10; //left position of topTopic. Set same as left margin
-var gap = 30; //30 pixel vertical gap between topics
+var gap = 20; //30 px vertical gap between bottom of previous subtopic and top of next subtopic
 var lftIndtA = 15; //left-indent from top topic left-edge to start of vertical line
 var lftIndtB = 10; //length of horizontal line from vertical line
 var lftIndt = topTpL + lftIndtA + lftIndtB;
 //   bottom position of topTopic. Top is zero, so add margins, border, padding iwht outerHeight
 var topTpB = $(".topTopic").outerHeight(true) - 1 /*-1 for canvas border, temporary*/;
-//Store how far from top each topic box starts
+//   Array to store how far from top each topic box starts
 var topDown = [];
+var medBrOHs = []; //Array to Store outer height of each medBrs[i]
 
 for(var i = 0; i < count; i++) {
 	var medBrs = [];
@@ -28,16 +29,14 @@ for(var i = 0; i < count; i++) {
 	medBrs[i].appendChild(txtNode);
 	$(medBrs[i]).appendTo('.wrap');
 
-	//outer height of preceeding topic box
-	var previousHt;
-	if(i > 0) {previousHt = $(medBrs[i]).outerHeight(true) - 1;} /*-1 for canvas border, temp*/
-	else {previousHt = $(".topTopic").outerHeight(true) -1;} /*-1 for canvas border, temp*/
-	console.log(previousHt);
+	//Store outer height of each medBrs[i]
+	medBrOHs[i] = $(medBrs[i]).outerHeight(true)
 
+	//store how far from top each topic box starts
 	topDown[0] = topTpB + 20;
-	topDown[i+1] = topDown[i] + $(medBrs[i]).outerHeight(true) + gap;
+	if(i === count-1) {/*do nothing--avoids putting extra element in topDown array*/}
+	else {topDown[i+1] = topDown[i] + medBrOHs[i] + gap;}
+
 
 	$(medBrs[i]).css('top', topDown[i]).css('margin-left', lftIndt);
-	console.log("topDown[" + i + "]: " + topDown[i]);
-	console.log("outerHeight for i=" + i + ": " + $(medBrs[i]).outerHeight(true));
 }
