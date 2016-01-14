@@ -23,7 +23,7 @@ var treeData = {
 					}
 				},
 				2: {
-					name: "Physics",
+					name: "Physics secondword?",
 					smBr: {
 						1: {
 							name: "Classical Mechanics"

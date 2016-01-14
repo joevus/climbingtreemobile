@@ -21,7 +21,7 @@ for(var i = 0; i < topDown.length; i++) {
 		ctx.moveTo(startX,startY);
 	}
 	else if(i <= 3 || i > 4) {
-		ctx.moveTo(startX,topDown[i-1] + 0.5 * medBrOHs[i]);
+		ctx.moveTo(startX,topDown[i-1] + 0.5 * medBrOHs[i-1]);
 	}
 	else if(i === 4) {
 		//startX shifts to right column when i = 4
@@ -29,7 +29,7 @@ for(var i = 0; i < topDown.length; i++) {
 		ctx.moveTo(startX, startY);
 	}
 	// if(i<4) {}
-	console.log("startX: " + startX);
+	console.log("y line to: " + (topDown[i] + 0.5 * medBrOHs[i]));
 	ctx.lineTo(startX, topDown[i] + 0.5 * medBrOHs[i]);
 	ctx.lineTo(startX + lftIndtB, topDown[i] + 0.5 * medBrOHs[i])
 	ctx.stroke();
