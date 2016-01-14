@@ -35,9 +35,8 @@ for(var i = 0; i < topDown.length; i++) {
 	ctx.stroke();
 }
 
-//** Draw lines **
-// ctx.beginPath();
-// ctx.moveTo(startX,startY);
-// ctx.lineTo(startX,startY + firstJump);
-// ctx.lineTo(startX + lftIndtB,startY + firstJump);
-// ctx.stroke();
+//**Next steps**
+// Get swiping carousel up (filled with dummy content if need to)
+// Connect to data
+// Other: clean up cod in topics.js and play.js
+//        decide whether to have topics alternate left, right. If so make it so!

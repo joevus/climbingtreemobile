@@ -40,9 +40,6 @@ for(var i = 0; i < count; i++) {
 	else if(i === 3) {topDown[i+1] = topDown[0]}
 	else {topDown[i+1] = topDown[i] + medBrOHs[i] + gap; }
 
-	//***Next Step***-- make code for left indentation for subtopics beyond 4th
-	// Then make code to draw lines to subtopics beyond the 4th subtopic
-
 	//lftIndt shifts to right colum when i > 3
 	if(i > 3){lftIndt = topTpL + lftIndtA2 + lftIndtB}
 	$(medBrs[i]).css('top', topDown[i]).css('margin-left', lftIndt);
