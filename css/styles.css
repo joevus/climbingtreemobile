@@ -30,3 +30,14 @@ body {
 	text-align: center;
 	width: 130px;
 }
+.wrapCentered {
+	position: absolute;
+	left: -50%;
+}
+#myCarousel {
+	position: absolute;
+	height: 300px;
+	width: 375px;
+	bottom: 0px;
+	margin:0;
+}

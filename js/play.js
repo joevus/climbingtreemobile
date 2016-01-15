@@ -1,10 +1,6 @@
 var canvas = document.getElementById('board');
 var ctx = canvas.getContext('2d');
 
-//query position of topTopic
-console.log($(".topTopic").position().left);
-console.log($(".topTopic").outerHeight(true));
-
 //** Calculate points for topic lines **
 
 //starting point
