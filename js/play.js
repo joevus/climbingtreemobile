@@ -30,9 +30,3 @@ for(var i = 0; i < topDown.length; i++) {
 	ctx.lineTo(startX + lftIndtB, topDown[i] + 0.5 * medBrOHs[i])
 	ctx.stroke();
 }
-
-//**Next steps**
-// Get swiping carousel up (filled with dummy content if need to)
-// Connect to data
-// Other: clean up cod in topics.js and play.js
-//        decide whether to have topics alternate left, right. If so make it so!
