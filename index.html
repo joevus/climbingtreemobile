@@ -33,7 +33,6 @@
               <h2>Title Goes Here</h2>
             </div>
           </div>
-          
           <img class="first-slide" src="img/khanacademy.png" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
@@ -82,5 +81,16 @@
 	<script src="js/data.js"></script>
 	<script src="js/topics.js"></script>
 	<script src="js/play.js"></script>
+  <script>  
+  //Add swipe to carousel!
+    $(document).ready(function() {  
+       $("#myCarousel").swiperight(function() {  
+          $("#myCarousel").carousel('prev');  
+        });  
+       $("#myCarousel").swipeleft(function() {  
+          $("#myCarousel").carousel('next');  
+       });  
+    });  
+</script>  
 </body>
 </html>
