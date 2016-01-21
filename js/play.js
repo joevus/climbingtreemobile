@@ -24,7 +24,6 @@ for(var i = 0; i < topDown.length; i++) {
 		startX = topTpL + lftIndtA2;
 		ctx.moveTo(startX, startY);
 	}
-	// if(i<4) {}
 	console.log("y line to: " + (topDown[i] + 0.5 * medBrOHs[i]));
 	ctx.lineTo(startX, topDown[i] + 0.5 * medBrOHs[i]);
 	ctx.lineTo(startX + lftIndtB, topDown[i] + 0.5 * medBrOHs[i])
