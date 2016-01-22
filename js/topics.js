@@ -19,29 +19,29 @@ var lftIndt = topTpL + lftIndtA1 + lftIndtB;
 var topTpB = $(".topTopic").outerHeight(true) - 1 /*-1 for canvas border, temporary*/;
 //   Array to store how far from top each topic box starts
 var topDown = [];
-var medBrOHs = []; //Array to Store outer height of each medBrs[i]
+var brOHs = []; //Array to Store outer height of brs[i]
 
 for(var i = 0; i < count; i++) {
-	var medBrs = [];
-	medBrs[i] = document.createElement("div");
-	medBrs[i].classList.add("subTopic", "topic");
+	var brs = [];
+	brs[i] = document.createElement("div");
+	brs[i].classList.add("subTopic", "topic");
 	var txt = treeData.bigBr[1].medBr[i+1].name;
 	var txtNode= document.createTextNode(txt);
-	medBrs[i].appendChild(txtNode);
-	$(medBrs[i]).appendTo('.wrap');
+	brs[i].appendChild(txtNode);
+	$(brs[i]).appendTo('.wrap');
 
-	//Store outer height of each medBrs[i]
-	medBrOHs[i] = $(medBrs[i]).outerHeight(true)
+	//Store outer height of each brs[i]
+	brOHs[i] = $(brs[i]).outerHeight(true)
 
 	//store how far from top each topic box starts
 	topDown[0] = topTpB + 20;
 	if(i === count-1) {/*do nothing--avoids putting extra element in topDown array*/}
 	//when i is 4 reset topDown[5] to same as topDown[0].
 	else if(i === 3) {topDown[i+1] = topDown[0]}
-	else {topDown[i+1] = topDown[i] + medBrOHs[i] + gap; }
+	else {topDown[i+1] = topDown[i] + brOHs[i] + gap; }
 
 	//lftIndt shifts to right colum when i > 3
 	if(i > 3){lftIndt = topTpL + lftIndtA2 + lftIndtB}
-	$(medBrs[i]).css('top', topDown[i]).css('margin-left', lftIndt);
+	$(brs[i]).css('top', topDown[i]).css('margin-left', lftIndt);
 	console.log("lftIndt: " + lftIndt + ", when i = " + i)
 }
