@@ -1,5 +1,7 @@
-// Make Header. Shows top-level topic no matter how far drill down.
-
+// Make header topic. Shows top-level topic no matter how far drill down.
+function headerTopic() {
+	
+}
 
 
 // Make top topic--from which middle topics immediately descend. It is located immediately above

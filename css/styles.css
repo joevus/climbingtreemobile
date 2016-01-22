@@ -16,10 +16,12 @@ body {
 	position: absolute;
 	left: -50%;
 }
+.grandDadTopic{
+	text-align: center;
+}
 .topTopic{
 	position: absolute;
 	text-align: center;
-	left: -50%;
 	margin-left: 10px;
 	width: 355px;
 	margin-top: 20px;

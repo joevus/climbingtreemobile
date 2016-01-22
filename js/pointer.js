@@ -41,6 +41,7 @@ var gen = brPointer.generation();
 console.log("what gen: " + gen);
 var treePos = {};
 var treeDad = {};
+var grandDad = {};
 var bigNum = 0;
 var medNum = 0;
 switch(gen){
@@ -49,6 +50,7 @@ switch(gen){
 		break;
 	case 0:
 		bigNum = brPointer.bigNum;
+		grandDad = treeData.bigBr[bigNum];
 		treeDad = treeData.bigBr[bigNum];
 		treePos = treeDad.medBr;
 		
@@ -56,12 +58,14 @@ switch(gen){
 	case 1:
 		bigNum = brPointer.bigNum;
 		medNum = brPointer.medNum;
+		grandDad = treeData.bigBr[bigNum];
 		treeDad = treeData.bigBr[bigNum].medBr[medNum];
 		treePos = treeDad.smBr;
 		break;
 	case 2:
 		bigNum = brPointer.bigNum;
 		medNum = brPointer.medNum;
+		grandDad = treeData.bigBr[bigNum];
 		treeDad = treeData.bigBr[bigNum].medBr[medNum];
 		treePos = treeDad.smBr;
 		// Add something here for highlighting the smBr we're on.
