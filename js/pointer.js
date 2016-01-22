@@ -1,22 +1,22 @@
 //brPointer points to current branch
 var brPointer = {
-	granddad: 1, //bigbr of current branch
-	dad: "none", //medbr of current branch.
-	kid: "none", //current branch
-	bigNum: 1, //track which big branch we're on.
-	medNum: 0, //track which med branch we're on.
-	smBrNum: 0 //track which small branch we're on.
+	bigNum: 2, //track which big branch we're on.
+	medNum: 2, //track which med branch we're on.
+	smBrNum: "none" //track which small branch we're on.
 };
 
 brPointer.generation = function() {
-	//2 means we're at kid, 1 means we're at dad, 0 we're at granddad, -1 we're at the beginning
-	if(this.kid !== "none") {
+	//2 means smallest branch selected is a small branch,
+	//1 means smallest branch selected is a med branch,
+	//0 means smallest branch selected is a big branch,
+	//-1 we're haven't selected any branch
+	if(this.smBrNum !== "none") {
 		return 2;
-	} else if(this.dad !== "none") {
+	} else if(this.medNum !== "none") {
 		return 1;
-	} else if(this.granddad !== "none") {
+	} else if(this.bigNum !== "none") {
 		return 0;
-	} else if(this.grandad == "none") {
+	} else if(this.bigNum == "none") {
 		return -1;
 	}
 };

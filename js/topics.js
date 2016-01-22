@@ -1,6 +1,6 @@
 //count number of branches under Science
 var count=0;
-for(var prop in treeData.bigBr[brPointer.granddad].medBr) {
+for(var prop in treePos) {
 	if(treeData.bigBr[1].medBr.hasOwnProperty(prop)) {
 		++count;
 	}
