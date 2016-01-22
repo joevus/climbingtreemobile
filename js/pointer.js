@@ -2,7 +2,10 @@
 var brPointer = {
 	granddad: 1, //bigbr of current branch
 	dad: "none", //medbr of current branch.
-	kid: "none" //current branch
+	kid: "none", //current branch
+	bigNum: 1, //track which big branch we're on.
+	medNum: 1, //track which med branch we're on.
+	smBrNum: 1 //track which small branch we're on.
 };
 
 brPointer.generation = function() {
@@ -33,6 +36,28 @@ brPointer.generation = function() {
 *  Will need to make the medBrOHs array into a more generic name. Same array should work for
 *  different levels, because we're making the topics appear the same.
 */
+
+var gen = brPointer.generation();
+var treePos = {};
+var bigNum = 0;
+var medNum = 0;
+switch(brPointer.gen){
+	case -1:
+		// no topic selected, show Science, Technology, Engineering, Math
+		break;
+	case 0:
+		treePos = treeData.bigBr;
+		break;
+	case 1:
+		bigNum = brPointer.bigNum;
+		treePos = treeData.bigBr[bigNum].medBr
+		break;
+	case 2:
+		bigNum = brPointer.bigNum;
+		medNum = brPointer.medNum;
+		treePos = treeData.bigBr[bigNum].medBr[medNum].smBr
+		break;
+}
 
 /* Make this process into a function.
 *  Make a different process for when the brPointer.generation() returns -1 (or
