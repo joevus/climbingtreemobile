@@ -25,7 +25,7 @@ for(var i = 0; i < count; i++) {
 	var brs = [];
 	brs[i] = document.createElement("div");
 	brs[i].classList.add("subTopic", "topic");
-	var txt = treeData.bigBr[1].medBr[i+1].name;
+	var txt = treePos[i+1].name;
 	var txtNode= document.createTextNode(txt);
 	brs[i].appendChild(txtNode);
 	$(brs[i]).appendTo('.wrap');

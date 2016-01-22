@@ -4,8 +4,8 @@ var brPointer = {
 	dad: "none", //medbr of current branch.
 	kid: "none", //current branch
 	bigNum: 1, //track which big branch we're on.
-	medNum: 1, //track which med branch we're on.
-	smBrNum: 1 //track which small branch we're on.
+	medNum: 0, //track which med branch we're on.
+	smBrNum: 0 //track which small branch we're on.
 };
 
 brPointer.generation = function() {
@@ -38,24 +38,28 @@ brPointer.generation = function() {
 */
 
 var gen = brPointer.generation();
+console.log("what gen: " + gen);
 var treePos = {};
 var bigNum = 0;
 var medNum = 0;
-switch(brPointer.gen){
+switch(gen){
 	case -1:
 		// no topic selected, show Science, Technology, Engineering, Math
 		break;
 	case 0:
-		treePos = treeData.bigBr;
+		bigNum = brPointer.bigNum;
+		treePos = treeData.bigBr[bigNum].medBr;
 		break;
 	case 1:
 		bigNum = brPointer.bigNum;
-		treePos = treeData.bigBr[bigNum].medBr
+		medNum = brPointer.medNum;
+		treePos = treeData.bigBr[bigNum].medBr[medNum].smBr;
 		break;
 	case 2:
 		bigNum = brPointer.bigNum;
 		medNum = brPointer.medNum;
-		treePos = treeData.bigBr[bigNum].medBr[medNum].smBr
+		treePos = treeData.bigBr[bigNum].medBr[medNum].smBr;
+		// Add something here for highlighting the smBr we're on.
 		break;
 }
 
