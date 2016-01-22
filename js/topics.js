@@ -1,7 +1,14 @@
+// Make Header. Shows top-level topic no matter how far drill down.
+
+
+
 // Make top topic--from which middle topics immediately descend. It is located immediately above
 // middle topics.
 function topTopic() {
-	
+	var txt = treeDad.name;
+	console.log("treePos in topTopic: " + treePos);
+	console.log("txt in topTopic: " + txt);
+	$(".topTopic").html(txt);
 }
 
 

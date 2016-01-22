@@ -1,8 +1,8 @@
 //brPointer points to current branch
 var brPointer = {
-	bigNum: 1, //track which big branch we're on.
-	medNum: 1, //track which med branch we're on.
-	smBrNum: "none" //track which small branch we're on.
+	bigNum: 2, //track which big branch we're on.
+	medNum: 2, //track which med branch we're on.
+	smBrNum: 1 //track which small branch we're on.
 };
 
 brPointer.generation = function() {
@@ -40,6 +40,7 @@ brPointer.generation = function() {
 var gen = brPointer.generation();
 console.log("what gen: " + gen);
 var treePos = {};
+var treeDad = {};
 var bigNum = 0;
 var medNum = 0;
 switch(gen){
@@ -48,17 +49,21 @@ switch(gen){
 		break;
 	case 0:
 		bigNum = brPointer.bigNum;
-		treePos = treeData.bigBr[bigNum].medBr;
+		treeDad = treeData.bigBr[bigNum];
+		treePos = treeDad.medBr;
+		
 		break;
 	case 1:
 		bigNum = brPointer.bigNum;
 		medNum = brPointer.medNum;
-		treePos = treeData.bigBr[bigNum].medBr[medNum].smBr;
+		treeDad = treeData.bigBr[bigNum].medBr[medNum];
+		treePos = treeDad.smBr;
 		break;
 	case 2:
 		bigNum = brPointer.bigNum;
 		medNum = brPointer.medNum;
-		treePos = treeData.bigBr[bigNum].medBr[medNum].smBr;
+		treeDad = treeData.bigBr[bigNum].medBr[medNum];
+		treePos = treeDad.smBr;
 		// Add something here for highlighting the smBr we're on.
 		break;
 }
