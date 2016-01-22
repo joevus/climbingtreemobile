@@ -1,6 +1,6 @@
 // Make header topic. Shows top-level topic no matter how far drill down.
 function headerTopic() {
-	
+
 }
 
 
@@ -47,7 +47,7 @@ function middleTopics() {
 		var txt = treePos[i+1].name;
 		var txtNode= document.createTextNode(txt);
 		brs[i].appendChild(txtNode);
-		$(brs[i]).appendTo('.wrap');
+		$(brs[i]).appendTo('.wrap1');
 
 		//Store outer height of each brs[i]
 		brOHs[i] = $(brs[i]).outerHeight(true)

@@ -1,8 +1,14 @@
 body {
 	margin: 0;
 }
-.wrap {
+.wrap1 {
 	position: absolute;
+	left: 50%;
+}
+.wrap2 {
+	display: block;
+	position: absolute;
+	width: 375px;
 	left: 50%;
 }
 #board {
@@ -17,7 +23,9 @@ body {
 	left: -50%;
 }
 .grandDadTopic{
+	position: absolute;
 	text-align: center;
+	left: -50%;
 }
 .topTopic{
 	position: absolute;
