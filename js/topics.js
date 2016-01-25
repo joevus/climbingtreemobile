@@ -56,14 +56,17 @@ function middleTopics() {
 		$(brs[i]).appendTo('.wrap1');
 
 		// store branch location data
-		brs[i].dataset.bigBr = bigNum;
+		brs[i].dataset.bigbr = bigNum;
 		console.log("in loop medNum: " + medNum);
 		if(medNum !== 0) {
-			brs[i].dataset.medBr = medNum;
-			brs[i].dataset.smBr = i + 1;
+			brs[i].dataset.medbr = medNum;
+			brs[i].dataset.smbr = i + 1;
 		} else {
-			brs[i].dataset.medBr = i + 1;
+			brs[i].dataset.medbr = i + 1;
 		}
+
+		// add event listener
+		brs[i].addEventListener("click", subTopicClicked/*function(){subTopicClicked()}*/, false);
 
 		//Store outer height of each brs[i]
 		brOHs[i] = $(brs[i]).outerHeight(true)
