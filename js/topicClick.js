@@ -10,7 +10,14 @@ function subTopicClicked() {
 		console.log("inside if(ele.dataset.medbr)");
 		brPointer.medNum = ele.dataset.medbr;
 		if(ele.dataset.smbr) {
-			brPointer.smNum = ele.dataset.smbr;
+			/* if we select the same small branch that's already selected, deselect it and
+			go back to the med branch. Gen will be 1 instead of 2 now. */
+			if(ele.dataset.smbr == smNum) {
+				brPointer.smNum = "none";
+			} else {
+			/* otherwise select it, set smNum to it. Gen will be 2.*/
+				brPointer.smNum = ele.dataset.smbr;
+			}
 		} else {
 			brPointer.smNum = "none";
 		}
