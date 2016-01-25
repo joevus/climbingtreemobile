@@ -55,6 +55,16 @@ function middleTopics() {
 		brs[i].appendChild(txtNode);
 		$(brs[i]).appendTo('.wrap1');
 
+		// store branch location data
+		brs[i].dataset.bigBr = bigNum;
+		console.log("in loop medNum: " + medNum);
+		if(medNum !== 0) {
+			brs[i].dataset.medBr = medNum;
+			brs[i].dataset.smBr = i + 1;
+		} else {
+			brs[i].dataset.medBr = i + 1;
+		}
+
 		//Store outer height of each brs[i]
 		brOHs[i] = $(brs[i]).outerHeight(true)
 

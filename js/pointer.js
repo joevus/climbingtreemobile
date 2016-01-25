@@ -1,8 +1,9 @@
 //brPointer points to current branch
 var brPointer = {
+	//options: "none" or number
 	bigNum: 2, //track which big branch we're on.
-	medNum: 2, //track which med branch we're on.
-	smBrNum: 1 //track which small branch we're on.
+	medNum: "none", //track which med branch we're on.
+	smNum: "none" //track which small branch we're on.
 };
 
 brPointer.generation = function() {
@@ -10,7 +11,7 @@ brPointer.generation = function() {
 	//1 means smallest branch selected is a med branch,
 	//0 means smallest branch selected is a big branch,
 	//-1 we're haven't selected any branch
-	if(this.smBrNum !== "none") {
+	if(this.smNum !== "none") {
 		return 2;
 	} else if(this.medNum !== "none") {
 		return 1;
