@@ -10,14 +10,19 @@ function headerTopic() {
 }
 
 
+/*** Top Topic ***/
+
 // Make top topic--from which middle topics immediately descend. It is located immediately above
 // middle topics.
 function topTopic() {
 	var txt = treeDad.name;
-	console.log("treePos in topTopic: " + treePos);
-	console.log("txt in topTopic: " + txt);
 	$(".topTopic").html(txt);
 }
+
+// Add event listener to top topic
+var topArr = document.getElementsByClassName("topTopic");
+var topTopicEl = topArr[0];
+topTopicEl.addEventListener("click", topTopicClicked, false);
 
 
 //Makes middle topics, includes drawLines function.
@@ -57,7 +62,6 @@ function middleTopics() {
 
 		// store branch location data
 		brs[i].dataset.bigbr = bigNum;
-		console.log("in loop medNum: " + medNum);
 		if(medNum !== 0) {
 			brs[i].dataset.medbr = medNum;
 			brs[i].dataset.smbr = i + 1;
@@ -81,7 +85,6 @@ function middleTopics() {
 		//lftIndt shifts to right colum when i > 3
 		if(i > 3){lftIndt = topTpL + lftIndtA2 + lftIndtB}
 		$(brs[i]).css('top', topDown[i]).css('margin-left', lftIndt);
-		console.log("lftIndt: " + lftIndt + ", when i = " + i)
 	}
 
 	//draw lines connecting topics on canvas.
@@ -120,7 +123,6 @@ function middleTopics() {
 				startX = topTpL + lftIndtA2;
 				ctx.moveTo(startX, startY);
 			}
-			console.log("y line to: " + (topDown[i] + 0.5 * brOHs[i]));
 			ctx.lineTo(startX, topDown[i] + 0.5 * brOHs[i]);
 			ctx.lineTo(startX + lftIndtB, topDown[i] + 0.5 * brOHs[i])
 			ctx.stroke();

@@ -9,7 +9,7 @@ var brPointer = {
 brPointer.generation = function() {
 	//2 means smallest branch selected is a small branch,
 	//1 means smallest branch selected is a med branch,
-	//0 means smallest branch selected is a big branch,
+	//0 means smallest branch selected is a big branch (Science, Tech, Eng, or Math),
 	//-1 we're haven't selected any branch
 	if(this.smNum !== "none") {
 		return 2;
@@ -54,6 +54,7 @@ function runPointers(){
 			break;
 		case 0:
 			bigNum = brPointer.bigNum;
+			medNum = 0;
 			grandDad = treeData.bigBr[bigNum];
 			treeDad = treeData.bigBr[bigNum];
 			treePos = treeDad.medBr;
@@ -75,6 +76,8 @@ function runPointers(){
 			// Add something here for highlighting the smBr we're on.
 			break;
 	}
+
+	console.log("medNum: " + medNum);
 }
 
 /* Make this process into a function.
