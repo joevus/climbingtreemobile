@@ -44,6 +44,7 @@ var treeDad = {};
 var grandDad = {};
 var bigNum = 0;
 var medNum = 0;
+var smNum = 0;
 
 function runPointers(){
 	var gen = brPointer.generation();
@@ -55,6 +56,7 @@ function runPointers(){
 		case 0:
 			bigNum = brPointer.bigNum;
 			medNum = 0;
+			smNum = 0;
 			grandDad = treeData.bigBr[bigNum];
 			treeDad = treeData.bigBr[bigNum];
 			treePos = treeDad.medBr;
@@ -63,6 +65,7 @@ function runPointers(){
 		case 1:
 			bigNum = brPointer.bigNum;
 			medNum = brPointer.medNum;
+			smNum = 0;
 			grandDad = treeData.bigBr[bigNum];
 			treeDad = treeData.bigBr[bigNum].medBr[medNum];
 			treePos = treeDad.smBr;
@@ -70,6 +73,7 @@ function runPointers(){
 		case 2:
 			bigNum = brPointer.bigNum;
 			medNum = brPointer.medNum;
+			smNum = brPointer.smNum;
 			grandDad = treeData.bigBr[bigNum];
 			treeDad = treeData.bigBr[bigNum].medBr[medNum];
 			treePos = treeDad.smBr;

@@ -60,14 +60,38 @@ function middleTopics() {
 		brs[i].appendChild(txtNode);
 		$(brs[i]).appendTo('.wrap1');
 
-		// store branch location data
+		/* store branch location data.
+		*  For gen:
+		*  2 means smallest branch selected is a small branch,
+		*  1 means smallest branch selected is a med branch,
+		*  0 means smallest branch selected is a big branch (Science, Tech, Eng, or Math),
+		*  -1 we haven't selected any branch
+		*/
+		var gen = brPointer.generation();
 		brs[i].dataset.bigbr = bigNum;
+		switch(gen) {
+			case 0:
+				brs[i].dataset.medbr = i + 1;
+				break;
+			case 1:
+				brs[i].dataset.medbr = medNum;
+				brs[i].dataset.smbr = i + 1;
+				break;
+			case 2:
+				brs[i].dataset.medbr = medNum;
+				brs[i].dataset.smbr = i + 1;
+				// Show which small branch is selected
+				if(i+1 == smNum) {$(brs[i]).toggleClass("selected");}
+				break;
+		}
+		/*
 		if(medNum !== 0) {
 			brs[i].dataset.medbr = medNum;
 			brs[i].dataset.smbr = i + 1;
 		} else {
 			brs[i].dataset.medbr = i + 1;
 		}
+		*/
 
 		// add event listener
 		brs[i].addEventListener("click", subTopicClicked/*function(){subTopicClicked()}*/, false);
