@@ -25,6 +25,7 @@ body {
 	position: absolute;
 	width: 355px;
 	margin-top: 5px;
+	margin-left: 10px;
 	text-align: center;
 	left: -50%;
 }

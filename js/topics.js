@@ -1,6 +1,12 @@
 // Make header topic. Shows top-level topic no matter how far drill down.
 function headerTopic() {
-
+	var txt = grandDad.name;
+	txt = txt.toUpperCase();
+	// split string into an array
+	var arr = txt.split("");
+	// turn array back to string, adding two spaces between each character
+	txt = arr.join("&nbsp");
+	$(".grandDadTopic").html(txt);
 }
 
 
