@@ -21,4 +21,16 @@ function subTopicClicked() {
 	// will need code after brPointer object is defined to rerun, turn it into a function and
 	// invoke it here!
 
+	//wipe canvas clean
+	var canvas = document.getElementById('board');
+	var ctx = canvas.getContext('2d');
+	ctx.clearRect(0,0, canvas.width, canvas.height);
+
+	//remove sub topic boxes
+	$('.subTopic').remove();
+
+	runPointers();
+	headerTopic();
+	topTopic();
+	middleTopics();
 }

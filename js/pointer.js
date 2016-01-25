@@ -1,7 +1,7 @@
 //brPointer points to current branch
 var brPointer = {
 	//options: "none" or number
-	bigNum: 2, //track which big branch we're on.
+	bigNum: 1, //track which big branch we're on.
 	medNum: "none", //track which med branch we're on.
 	smNum: "none" //track which small branch we're on.
 };
@@ -38,39 +38,43 @@ brPointer.generation = function() {
 *  different levels, because we're making the topics appear the same.
 */
 
-var gen = brPointer.generation();
-console.log("what gen: " + gen);
+// Variables outside of functions
 var treePos = {};
 var treeDad = {};
 var grandDad = {};
 var bigNum = 0;
 var medNum = 0;
-switch(gen){
-	case -1:
-		// no topic selected, show Science, Technology, Engineering, Math
-		break;
-	case 0:
-		bigNum = brPointer.bigNum;
-		grandDad = treeData.bigBr[bigNum];
-		treeDad = treeData.bigBr[bigNum];
-		treePos = treeDad.medBr;
-		
-		break;
-	case 1:
-		bigNum = brPointer.bigNum;
-		medNum = brPointer.medNum;
-		grandDad = treeData.bigBr[bigNum];
-		treeDad = treeData.bigBr[bigNum].medBr[medNum];
-		treePos = treeDad.smBr;
-		break;
-	case 2:
-		bigNum = brPointer.bigNum;
-		medNum = brPointer.medNum;
-		grandDad = treeData.bigBr[bigNum];
-		treeDad = treeData.bigBr[bigNum].medBr[medNum];
-		treePos = treeDad.smBr;
-		// Add something here for highlighting the smBr we're on.
-		break;
+
+function runPointers(){
+	var gen = brPointer.generation();
+
+	switch(gen){
+		case -1:
+			// no topic selected, show Science, Technology, Engineering, Math
+			break;
+		case 0:
+			bigNum = brPointer.bigNum;
+			grandDad = treeData.bigBr[bigNum];
+			treeDad = treeData.bigBr[bigNum];
+			treePos = treeDad.medBr;
+			
+			break;
+		case 1:
+			bigNum = brPointer.bigNum;
+			medNum = brPointer.medNum;
+			grandDad = treeData.bigBr[bigNum];
+			treeDad = treeData.bigBr[bigNum].medBr[medNum];
+			treePos = treeDad.smBr;
+			break;
+		case 2:
+			bigNum = brPointer.bigNum;
+			medNum = brPointer.medNum;
+			grandDad = treeData.bigBr[bigNum];
+			treeDad = treeData.bigBr[bigNum].medBr[medNum];
+			treePos = treeDad.smBr;
+			// Add something here for highlighting the smBr we're on.
+			break;
+	}
 }
 
 /* Make this process into a function.

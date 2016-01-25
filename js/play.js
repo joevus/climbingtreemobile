@@ -1,3 +1,6 @@
+// set variables that depend on pointer for first time
+runPointers();
+
 // Set text of header topic (grandDad)
 headerTopic();
 
