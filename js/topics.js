@@ -31,7 +31,7 @@ function middleTopics() {
 	//count number of branches under Science
 	var count=0;
 	for(var prop in treePos) {
-		if(treeData.bigBr[1].medBr.hasOwnProperty(prop)) {
+		if(treePos.hasOwnProperty(prop)) {
 			++count;
 		}
 	}
@@ -59,7 +59,7 @@ function middleTopics() {
 		var txtNode= document.createTextNode(txt);
 		brs[i].appendChild(txtNode);
 		$(brs[i]).appendTo('.wrap1');
-
+		console.log("middleTopics i: " + i);
 		/* store branch location data.
 		*  For gen:
 		*  2 means smallest branch selected is a small branch,

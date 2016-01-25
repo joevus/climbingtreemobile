@@ -13,12 +13,19 @@ var treeData = {
 							name: "Lava"
 						},
 						3: {
-							name: "Sediment"
+							name: "Sediment",
+							leaf: {
+								1: {
+									name: "smithsonian.com",
+									img: "smithsonian"
+								}
+							}
 						}
 					},
 					leaf: {
 						1: {
-							name: "Geeeeology.com"
+							name: "Geeeeology.com",
+							img: "fiverr"
 						}
 					}
 				},
@@ -34,7 +41,8 @@ var treeData = {
 					},
 					leaf: {
 						1: {
-							name: "Pysics.com"
+							name: "Physics.com",
+							img: "adobe"
 						}
 					}
 				},
@@ -122,7 +130,13 @@ var treeData = {
 						}
 					}//end leaf
 				}//end 8 (medBr)
-			}//end medBr
+			},//end medBr
+			leaf: {
+				1: {
+					name: "khanacademy",
+					img: "khanacademy"
+				} //end 1 (leaf)
+			} //end leaf
 		},//end 1 (bigBr)
 		2: { //start bigBr2
 			name: "Technology",
