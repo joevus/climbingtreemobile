@@ -15,11 +15,15 @@ body {
 	position: relative;
 	left:-50%;
 	border: 1px solid black;
+	/*so cursor on topTopic and grandDadTopic will be pointer, otherwise canvas convers them
+	I think*/
+	z-index: -1;
 }
 .topic {
 	border-radius: 5px;
 	position: absolute;
 	left: -50%;
+	cursor: pointer;
 }
 .grandDadTopic{
 	position: absolute;
@@ -28,6 +32,7 @@ body {
 	margin-left: 10px;
 	text-align: center;
 	left: -50%;
+	cursor: pointer;
 }
 .topTopic{
 	position: absolute;
