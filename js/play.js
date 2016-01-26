@@ -11,5 +11,5 @@ topTopic();
 middleTopics();
 
 //load up carousel
-getImgNames("hi");
-loadCarousel();
+var slideData = getLeafData();
+loadCarousel(slideData);

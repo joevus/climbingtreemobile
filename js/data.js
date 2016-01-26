@@ -133,9 +133,17 @@ var treeData = {
 			},//end medBr
 			leaf: {
 				1: {
-					name: "khanacademy",
-					img: "khanacademy"
-				} //end 1 (leaf)
+					siteTitle: "Khanacademy",
+					img: "khanacademy",
+					url: "khanacademy.com",
+					descrip: "Learning by friendly videos, set courses, many subjects, and you earn points and badges!"
+				}, //end 1 (leaf)
+				2: {
+					siteTitle: "Fiverr",
+					img: "fiverr",
+					url: "fiverr.com",
+					descrip: "People offer services such as graphic design and others, for $5."
+				} // end 2 (leaf)
 			} //end leaf
 		},//end 1 (bigBr)
 		2: { //start bigBr2
