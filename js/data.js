@@ -466,5 +466,21 @@ var treeData = {
 				}//end 5 (medBr)
 			}//end medBr
 		}//end 5 (bigBr)
-	}//end bigBr
+	},//end bigBr
+	featured: {
+		leaf: {
+			1: {
+				siteTitle: "Fiverr",
+				url: "fiverr.com",
+				img: "fiverr",
+				descrip: "People offer services such as graphic design and others, for $5."
+			},
+			2: {
+				siteTitle: "Simithsonian",
+				url: "smithsonian.com",
+				img: "smithsonian",
+				descrip: "Home of the famouse museum. Exhibit information, online exhibits, research, education programs."
+			}
+		}
+	}
 };//end treeData

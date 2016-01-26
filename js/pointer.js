@@ -1,7 +1,7 @@
 //brPointer points to current branch
 var brPointer = {
 	//options: "none" or number
-	bigNum: 1, //track which big branch we're on.
+	bigNum: "none", //track which big branch we're on.
 	medNum: "none", //track which med branch we're on.
 	smNum: "none" //track which small branch we're on.
 };

@@ -45,9 +45,12 @@ function getLeafData() {
 	// instead of treeDad.
 	if(gen == 2) {
 		leafPlace = treePos;
-	} else {
+	} else if(gen == 0 || gen == 1) {
 		// For when med or big branch is selected (gen = 0 or 1).
 		leafPlace = treeDad;
+	} else {
+		//when gen == -1
+		leafPlace = treeData.featured;
 	}
 	//count number of leaves under current treeDad
 	var count=0;

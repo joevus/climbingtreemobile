@@ -51,6 +51,27 @@ body {
 	padding-left: 18px;
 	padding-right: 18px;
 }
+.firstTpScreen{
+	position: absolute;
+	left: -50%;
+}
+.firstTp {
+	position: absolute;
+	text-align: center;
+	margin-left: 10px;
+	width: 355px;
+	margin-top: 35px;
+	border: 1px black solid;
+	border-radius: 5px;
+	cursor: pointer;
+}
+#ft1{
+	/*position: absolute;
+	top: 50px;*/
+}
+#ft2{
+
+}
 .subTopic {
 	border: 1px black solid;
 	text-align: center;

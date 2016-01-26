@@ -1,5 +1,16 @@
 /*** First Topics Screen **/
 function firstTpScreen(){
+	// hide top topics
+	$(".topTopic").hide();
+	// hide sub topics if they exist
+	if($(".subTopic")) {
+		$(".subTopic").hide();
+	}
+
+	for(var i = 1; i < 5; i++) {
+		var down = i * 50 + "px";
+		$("#ft" + i).css("top", down).text(treeData.bigBr[i].name);	
+	}
 	
 }
 
@@ -8,6 +19,7 @@ function firstTpScreen(){
 
 // Make header topic. Shows top-level topic no matter how far drill down.
 function headerTopic() {
+
 	var txt = grandDad.name;
 	txt = txt.toUpperCase();
 	// split string into an array
@@ -25,12 +37,14 @@ function headerTopic() {
 function topTopic() {
 	var txt = treeDad.name;
 	$(".topicTxt").text(txt);
+
+	// Add event listener to top topic
+	var topArr = document.getElementsByClassName("topTopic");
+	var topTopicEl = topArr[0];
+	topTopicEl.addEventListener("click", topTopicClicked, false);
 }
 
-// Add event listener to top topic
-var topArr = document.getElementsByClassName("topTopic");
-var topTopicEl = topArr[0];
-topTopicEl.addEventListener("click", topTopicClicked, false);
+
 
 
 //Makes middle topics, includes drawLines function.
