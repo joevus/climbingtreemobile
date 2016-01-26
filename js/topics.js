@@ -1,3 +1,11 @@
+/*** First Topics Screen **/
+function firstTpScreen(){
+	
+}
+
+
+/*** Header Topic ***/
+
 // Make header topic. Shows top-level topic no matter how far drill down.
 function headerTopic() {
 	var txt = grandDad.name;
@@ -16,7 +24,7 @@ function headerTopic() {
 // middle topics.
 function topTopic() {
 	var txt = treeDad.name;
-	$(".topTopic").html(txt);
+	$(".topicTxt").text(txt);
 }
 
 // Add event listener to top topic

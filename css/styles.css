@@ -42,6 +42,15 @@ body {
 	margin-top: 35px;
 	border: 1px black solid;
 }
+#upnav{
+	position: absolute;
+	left: 15px;
+}
+.topicTxt {
+	/*padding to keep it from running into glyph on left*/
+	padding-left: 18px;
+	padding-right: 18px;
+}
 .subTopic {
 	border: 1px black solid;
 	text-align: center;
