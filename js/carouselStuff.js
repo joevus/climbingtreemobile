@@ -14,14 +14,15 @@ function loadCarousel(slideData) {
 		var divFooter = document.createElement("div");
 		var para = document.createElement("p");
 
-		var slideNum = "first-slide"
+		//var slideNum = "first-slide";
 
 		$(divItem).addClass("item").appendTo(".carousel-inner");
+		if(i==0){$(divItem).addClass("active");}
 		$(divContainer1).addClass("container").appendTo(divItem);
 		$(divTitle).addClass("carousel-title").appendTo(divContainer1);
 		$(h2).html(leaf.siteTitle).appendTo(divTitle);
 		//make "first-slide" a variable
-		$(img).addClass(slideNum).attr("src", imgSrc).attr("alt", "slideNum").appendTo(divItem);
+		$(img)/*.addClass(slideNum)*/.attr("src", imgSrc).attr("alt", "slideNum").appendTo(divItem);
 		$(divContainer2).addClass("container").appendTo(divItem);
 		//left out carousel-caption
 		$(divFooter).addClass("carousel-footer").appendTo(divContainer2);
