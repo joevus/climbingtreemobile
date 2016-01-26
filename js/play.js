@@ -9,3 +9,7 @@ topTopic();
 
 // Make middle topics and draw lines
 middleTopics();
+
+//load up carousel
+getImgNames("hi");
+loadCarousel();

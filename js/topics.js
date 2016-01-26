@@ -28,7 +28,7 @@ topTopicEl.addEventListener("click", topTopicClicked, false);
 //Makes middle topics, includes drawLines function.
 
 function middleTopics() {
-	//count number of branches under Science
+	//count number of branches under current treePos
 	var count=0;
 	for(var prop in treePos) {
 		if(treePos.hasOwnProperty(prop)) {
