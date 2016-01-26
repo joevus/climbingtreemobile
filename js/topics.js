@@ -6,10 +6,19 @@ function firstTpScreen(){
 	if($(".subTopic")) {
 		$(".subTopic").hide();
 	}
+	// wipe canvas clean
+	wipeCanvas();
 
+	//show topics on first topic screen
+	$(".firstTpScreen").show();
+
+	//below could be in its own function, only needs to run once.
 	for(var i = 1; i < 5; i++) {
+		var ftEle = document.getElementById("ft" + i);
 		var down = i * 50 + "px";
-		$("#ft" + i).css("top", down).text(treeData.bigBr[i].name);	
+		$(ftEle).css("top", down).text(treeData.bigBr[i].name);
+
+		ftEle.addEventListener("click", ftClicked, false);
 	}
 	
 }
@@ -27,6 +36,9 @@ function headerTopic() {
 	// turn array back to string, adding two spaces between each character
 	txt = arr.join("&nbsp");
 	$(".grandDadTopic").html(txt);
+
+	// When header topic (grandDad topic) clicked, show STEM topics
+	$(".grandDadTopic").on("click", grandDadClicked);
 }
 
 

@@ -1,44 +1,27 @@
-function subTopicClicked() {
-	/* When sub topic is clicked, query the branch locations and change brPointer accordingly.
-	*  Changing brPointer will allow new sub topics and top topic to appear. Also carousel
-	*  will change. 
-	*  Parameter ele: refers to clicked element. */
-
+function ftClicked() {
 	var ele = this;
-	brPointer.bigNum = ele.dataset.bigbr;
-	if(ele.dataset.medbr){
-		console.log("inside if(ele.dataset.medbr)");
-		brPointer.medNum = ele.dataset.medbr;
-		if(ele.dataset.smbr) {
-			/* if we select the same small branch that's already selected, deselect it and
-			go back to the med branch. Gen will be 1 instead of 2 now. */
-			if(ele.dataset.smbr == smNum) {
-				brPointer.smNum = "none";
-			} else {
-			/* otherwise select it, set smNum to it. Gen will be 2.*/
-				brPointer.smNum = ele.dataset.smbr;
-			}
-		} else {
-			brPointer.smNum = "none";
-		}
-	} else {
-		brPointer.medNum = "none";
-		brPointer.smNum = "none";
-	}
+	// num is x in #ftx. 1 = science, 2 = technology, 3 = engineering, 4 = math
+	var num = ele.id[2];
 
-	//wipe canvas clean
-	var canvas = document.getElementById('board');
-	var ctx = canvas.getContext('2d');
-	ctx.clearRect(0,0, canvas.width, canvas.height);
+	$(".firstTpScreen").hide();
+	$(".topTopic").show();
 
-	// remove sub topic boxes
-	$('.subTopic').remove();
+	// set pointer
+	brPointer.bigNum = num;
+	console.log("num: " + num);
+	console.log("brPointer.bigNum: " + brPointer.bigNum);
 
-	// refresh topics
+	// run topics
 	runPointers();
 	headerTopic();
 	topTopic();
 	middleTopics();
+}
+
+function grandDadClicked() {
+	var ele = this;
+	// bring up STEM topics
+	firstTpScreen();
 }
 
 function topTopicClicked() {
@@ -69,4 +52,52 @@ function topTopicClicked() {
 	headerTopic();
 	topTopic();
 	middleTopics();
+}
+
+function subTopicClicked() {
+	/* When sub topic is clicked, query the branch locations and change brPointer accordingly.
+	*  Changing brPointer will allow new sub topics and top topic to appear. Also carousel
+	*  will change. 
+	*  Parameter ele: refers to clicked element. */
+
+	var ele = this;
+	brPointer.bigNum = ele.dataset.bigbr;
+	if(ele.dataset.medbr){
+		console.log("inside if(ele.dataset.medbr)");
+		brPointer.medNum = ele.dataset.medbr;
+		if(ele.dataset.smbr) {
+			/* if we select the same small branch that's already selected, deselect it and
+			go back to the med branch. Gen will be 1 instead of 2 now. */
+			if(ele.dataset.smbr == smNum) {
+				brPointer.smNum = "none";
+			} else {
+			/* otherwise select it, set smNum to it. Gen will be 2.*/
+				brPointer.smNum = ele.dataset.smbr;
+			}
+		} else {
+			brPointer.smNum = "none";
+		}
+	} else {
+		brPointer.medNum = "none";
+		brPointer.smNum = "none";
+	}
+
+	//wipe canvas clean
+	wipeCanvas();
+
+	// remove sub topic boxes
+	$('.subTopic').remove();
+
+	// refresh topics
+	runPointers();
+	headerTopic();
+	topTopic();
+	middleTopics();
+}
+
+function wipeCanvas(){
+	//wipe canvas clean
+	var canvas = document.getElementById('board');
+	var ctx = canvas.getContext('2d');
+	ctx.clearRect(0,0, canvas.width, canvas.height);
 }

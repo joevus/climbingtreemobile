@@ -55,6 +55,7 @@ function runPointers(){
 			break;
 		case 0:
 			bigNum = brPointer.bigNum;
+			console.log("brPointer.bigNum: " + brPointer.bigNum);
 			medNum = 0;
 			smNum = 0;
 			grandDad = treeData.bigBr[bigNum];
