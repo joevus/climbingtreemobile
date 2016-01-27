@@ -47,7 +47,6 @@ function getLeafData() {
 	// instead of treeDad.
 	if(gen == 2) {
 		leafPlace = treePos[smNum];
-		console.log("treePos");
 	} else if(gen == 0 || gen == 1) {
 		// For when med or big branch is selected (gen = 0 or 1).
 		leafPlace = treeDad;
