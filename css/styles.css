@@ -40,9 +40,11 @@ body {
 	text-align: center;
 	margin-left: 10px;
 	width: 355px;
-	margin-top: 35px;
+	margin-top: 55px;
 	border-radius: 5px;
 	border: 1px black solid;
+	font-family: 'sofia_prolight';
+	font-size: 18pt;
 }
 #upnav{
 	position: absolute;
@@ -67,6 +69,8 @@ body {
 	border: 1px black solid;
 	border-radius: 5px;
 	cursor: pointer;
+	font-family: 'sofia_prolight';
+	font-size: 18pt;
 }
 #ft1{
 	/*position: absolute;
@@ -76,6 +80,7 @@ body {
 
 }
 .subTopic {
+	font-family: 'sofia_prolight', Arial, sans-serif;
 	border-radius: 5px;
 	border: 1px black solid;
 	text-align: center;
