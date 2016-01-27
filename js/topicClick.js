@@ -35,6 +35,7 @@ function topTopicClicked() {
 
 	switch (gen) {
 		case 0:
+			brPointer.bigNum = "none";
 			break;
 		case 1:
 			brPointer.medNum = "none";
@@ -52,11 +53,20 @@ function topTopicClicked() {
 	// remove sub topic boxes
 	$('.subTopic').remove();
 
-	// refresh topics
+	// calculater pointers
 	runPointers();
-	headerTopic();
-	topTopic();
-	middleTopics();
+
+	// if at top level go back to first screen
+	if(brPointer.bigNum == "none") {
+		firstTpScreen();
+	}
+	else {
+	// if not at top level, run header, top, and sub topics
+		headerTopic();
+		topTopic();
+		middleTopics();
+	}
+	
 	//load up carousel
 	var slideData = getLeafData();
 	loadCarousel(slideData);
