@@ -12,8 +12,8 @@ body {
 }*/
 #board {
 	display: block;
-	position: relative;
-	left:-50%;
+	position: absolute;
+	/*left:-50%;*/
 	/*border: 1px solid black;*/
 	background-color: #fbf0fb;
 	/*so cursor on topTopic and grandDadTopic will be pointer, otherwise canvas convers them
@@ -21,22 +21,22 @@ body {
 	z-index: -1;
 }
 .topic {
-	position: absolute;
-	left: -50%;
+	/*position: absolute;*/
+	/*left: -50%;*/
 	cursor: pointer;
 	background-color: white;
 }
 .grandDadTopic{
-	position: absolute;
+	/*position: absolute;*/
 	background-color: #F4FBB7;
 	width: 100%;
 	line-height: 1.9;
 	text-align: center;
-	left: -50%;
+	/*left: -50%;*/
 	cursor: pointer;
 }
 .topTopic{
-	position: absolute;
+	/*position: absolute;*/
 	text-align: center;
 	margin-left: 10px;
 	width: 355px;
@@ -57,10 +57,10 @@ body {
 }
 .firstTpScreen{
 	position: absolute;
-	left: -50%;
+	/*left: -50%;*/
 }
 .firstTp {
-	position: absolute;
+	/*position: absolute;*/
 	background-color: white;
 	text-align: center;
 	margin-left: 10px;
@@ -89,7 +89,7 @@ body {
 }
 .wrapCentered {
 	position: absolute;
-	left: -50%;
+	/*left: -50%;*/
 }
 .selected {
 	background-color: red;

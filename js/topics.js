@@ -93,7 +93,7 @@ function middleTopics() {
 		var txt = treePos[i+1].name;
 		var txtNode= document.createTextNode(txt);
 		brs[i].appendChild(txtNode);
-		$(brs[i]).appendTo('.wrap1');
+		$(brs[i]).appendTo('.row');
 		console.log("middleTopics i: " + i);
 		/* store branch location data.
 		*  For gen:
