@@ -7,7 +7,15 @@ var treeData = {
 					name: "Geeeemology",
 					smBr: {
 						1: {
-							name: "Rocks"
+							name: "Rocks",
+							leaf: {
+								1: {
+									siteTitle: "Khanacademy",
+									img: "khanacademy",
+									url: "khanacademy.com",
+									descrip: "Learning by friendly videos, set courses, many subjects, and you earn points and badges!"
+								}
+							}
 						},
 						2: {
 							name: "Lava"
@@ -16,8 +24,10 @@ var treeData = {
 							name: "Sediment",
 							leaf: {
 								1: {
+									siteTitle: "The Smithsonian",
 									name: "smithsonian.com",
-									img: "smithsonian"
+									img: "smithsonian",
+									descrip: "Home of the famouse museum. Exhibit information, online exhibits, research, education programs."
 								}
 							}
 						}

@@ -77,7 +77,7 @@ function runPointers(){
 			smNum = brPointer.smNum;
 			grandDad = treeData.bigBr[bigNum];
 			treeDad = treeData.bigBr[bigNum].medBr[medNum];
-			treePos = treeDad.smBr;
+			treePos = treeDad.smBr
 			// Add something here for highlighting the smBr we're on.
 			break;
 	}

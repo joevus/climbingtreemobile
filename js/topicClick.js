@@ -8,6 +8,8 @@ function ftClicked() {
 
 	// set pointer
 	brPointer.bigNum = num;
+	brPointer.medNum = "none";
+	brPointer.smNum = "none";
 	console.log("num: " + num);
 	console.log("brPointer.bigNum: " + brPointer.bigNum);
 

@@ -46,7 +46,8 @@ function getLeafData() {
 	// Special case if small branch selected (gen = 2). Use a layer deeper than normal: treePos,
 	// instead of treeDad.
 	if(gen == 2) {
-		leafPlace = treePos;
+		leafPlace = treePos[smNum];
+		console.log("treePos");
 	} else if(gen == 0 || gen == 1) {
 		// For when med or big branch is selected (gen = 0 or 1).
 		leafPlace = treeDad;
