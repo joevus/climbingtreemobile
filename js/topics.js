@@ -16,7 +16,7 @@ function firstTpScreen(){
 	//below could be in its own function, only needs to run once.
 	for(var i = 1; i < 5; i++) {
 		var ftEle = document.getElementById("ft" + i);
-		var down = i * 50 + "px";
+		var down = i * 60 + "px";
 		$(ftEle).css("top", down).text(treeData.bigBr[i].name);
 
 		ftEle.addEventListener("click", ftClicked, false);
