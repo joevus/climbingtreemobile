@@ -1,5 +1,7 @@
 // a function to wipe the carousel and then load in a new set of slides
 function loadCarousel(slideData) {
+	//clear out carousel slides
+	$(".carousel-inner").empty();
 
 	for( var i = 0; i < slideData.length; i++) {
 		var leaf = slideData[i];

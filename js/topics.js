@@ -1,4 +1,5 @@
 /*** First Topics Screen **/
+
 function firstTpScreen(){
 	// hide top topics
 	$(".topTopic").hide();

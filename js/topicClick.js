@@ -16,6 +16,9 @@ function ftClicked() {
 	headerTopic();
 	topTopic();
 	middleTopics();
+	//load up carousel
+	var slideData = getLeafData();
+	loadCarousel(slideData);
 }
 
 function grandDadClicked() {
@@ -52,6 +55,9 @@ function topTopicClicked() {
 	headerTopic();
 	topTopic();
 	middleTopics();
+	//load up carousel
+	var slideData = getLeafData();
+	loadCarousel(slideData);
 }
 
 function subTopicClicked() {
@@ -93,6 +99,9 @@ function subTopicClicked() {
 	headerTopic();
 	topTopic();
 	middleTopics();
+	//load up carousel
+	var slideData = getLeafData();
+	loadCarousel(slideData);
 }
 
 function wipeCanvas(){
