@@ -14,8 +14,11 @@
 <body>
   <!-- A thanks to Glyphicon: glyphicons.com -->
   <div class="container">
-    <div class="row">
+    <canvas id='board' width=375 height=667></canvas>
+    <div class="row topicRow" style="height: 367px;">
+
       <div class="col-md-6 col-md-offset-3">
+
       	<!-- <div class="wrap1"> -->
           <div class="topic grandDadTopic">
           </div>
@@ -35,8 +38,13 @@
             <div id="ft4" class="firstTp">
             </div>
           </div>
-          <canvas id='board' width=375 height=667></canvas>
 
+      </div><!--end col -->
+
+    </div><!--end row-->
+
+    <div class="row" style="height: 300px;">
+      <div class="col-md-6 col-md-offset-3">
       <!-- Carousel
         ==================================== -->
           <div id="myCarousel" class="carousel slide wrapCentered" data-ride="carousel" data-interval="60000">
@@ -94,10 +102,9 @@
               <span class="sr-only">Next</span>
             </a>
           </div><!-- /.carousel -->
-
+      </div><!--end col -->
+    </div><!--end row-->
       	<!-- </div><!-- end Wrap -->
-      </div><!-- end col -->
-    </div><!-- end row -->
   </div><!--end container-->
 
 	<script src="js/jquery-2.1.1.js"></script>
