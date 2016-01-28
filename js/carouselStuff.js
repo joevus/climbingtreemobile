@@ -19,11 +19,12 @@ function loadCarousel(slideData) {
 
 		$(divItem).addClass("item").appendTo(".carousel-inner");
 		if(i==0){$(divItem).addClass("active");}
-		$(divContainer1).addClass("container").appendTo(divItem);
-		$(divTitle).addClass("carousel-title").appendTo(divContainer1);
+		//$(divContainer1).addClass("container").appendTo(divItem);
+		//$(divTitle).addClass("carousel-title").appendTo(divContainer1);
+		$(divTitle).addClass("carousel-title").appendTo(divItem);
 		$(h2).html(leaf.siteTitle).appendTo(divTitle);
-		//make "first-slide" a variable
-		$(img)/*.addClass(slideNum)*/.attr("src", imgSrc).attr("alt", "slideNum").appendTo(divItem);
+		//used to have the variable slideNum added as a class. May help in future?
+		$(img).addClass("slideImg").attr("src", imgSrc).attr("alt", "slideNum").appendTo(divItem);
 		//left out carousel-caption
 		$(divFooter).addClass("carousel-footer").appendTo(divItem);
 		$(para).html(leaf.descrip).appendTo(divFooter);

@@ -10,12 +10,13 @@ body {
 	width: 375px;
 	left: 50%;
 }*/
+
 #board {
-	display: block;
+	/*display: block;*/
 	position: absolute;
+	margin-left: -15px;
 	width: 100%;
 	height: 100%;
-	/*left:-50%;*/
 	/*border: 1px solid black;*/
 	background-color: #fbf0fb;
 	/*so cursor on topTopic and grandDadTopic will be pointer, otherwise canvas convers them
@@ -65,8 +66,8 @@ body {
 	/*position: absolute;*/
 	background-color: white;
 	text-align: center;
-	margin-left: 10px;
-	width: 355px;
+	margin: auto;
+	max-width: 500px;
 	margin-top: 35px;
 	border: 1px black solid;
 	border-radius: 5px;

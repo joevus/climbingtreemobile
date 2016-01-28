@@ -40,10 +40,8 @@ body {
 /* Carousel base class */
 .carousel {
   /*position: absolute;*/
-  height: 300px;
   width: 100%;
   /*bottom: -100px;*/
-  margin-bottom: 3px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -51,23 +49,24 @@ body {
 }
 /*Joe: help out the title like we did the caption*/
 .carousel-title {
-  position: absolute;
+  /*position: absolute;*/
   z-index: 100;
   color: black;
-  top: -20px;
+  /*top: -20px;*/
 }
 .carousel-title > h2 {
   color: black;
-  margin-right: auto; margin-left: auto;
+  margin-top: 0; margin-bottom: 0;
+  padding: 4px;
+  text-align: center;
 }
 .carousel-footer {
-  position: absolute;
   bottom: 0;
   color: #fff;
   height: 40px;
 }
 .carousel-footer > p {
-  top:3px;
+  padding: 3px;
 }
 
 
@@ -75,14 +74,13 @@ body {
 .carousel .item {
   /*Can't seem to get the carousel item and img to go to bottom of carousel when
   they are smaller than the carousel*/
-  height: 300px;
   background-color: #777;
 }
 .carousel-inner > .item > img {
-  position: absolute;
-  top: 30px;
-  left: 0;
-  min-width: 100%;
+/*  position: absolute;*/
+  /*margin-top: 30px;*/
+  margin: auto;
+  width: 375px;
   height: 230px;
 }
 
