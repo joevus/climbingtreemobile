@@ -39,7 +39,7 @@ body {
 	cursor: pointer;
 }
 .topTopic{
-	/*position: absolute;*/
+	position: relative;
 	text-align: center;
 	margin: auto;
 	max-width: 720px;
@@ -50,7 +50,8 @@ body {
 }
 #upnav{
 	position: absolute;
-	left: 15px;
+	left: 25px;
+	top: 3px;
 }
 .topicTxt {
 	/*padding to keep it from running into glyph on left*/
