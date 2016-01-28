@@ -93,7 +93,7 @@ function middleTopics() {
 		var txt = treePos[i+1].name;
 		var txtNode= document.createTextNode(txt);
 		brs[i].appendChild(txtNode);
-		if(i <3 ) {
+		if(i % 2 == 0 ) {
 			$(brs[i]).appendTo('.middleRow > .leftCol');
 		} else {
 			$(brs[i]).appendTo('.middleRow > .rightCol');
