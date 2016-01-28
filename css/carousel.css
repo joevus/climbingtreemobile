@@ -36,7 +36,11 @@ body {
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
-
+/*Joe: put that carousel on the bottom; */
+.carRow {
+  /*position: absolute;*/
+  bottom: 0px;
+}
 /* Carousel base class */
 .carousel {
   /*position: absolute;*/
@@ -63,10 +67,11 @@ body {
 .carousel-footer {
   bottom: 0;
   color: #fff;
-  height: 40px;
+  padding: 5px;
 }
 .carousel-footer > p {
-  padding: 3px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 
