@@ -93,7 +93,7 @@ function middleTopics() {
 		var txt = treePos[i+1].name;
 		var txtNode= document.createTextNode(txt);
 		brs[i].appendChild(txtNode);
-		$(brs[i]).appendTo('.topicRow');
+		$(brs[i]).appendTo('.middleRow > .leftCol');
 		console.log("middleTopics i: " + i);
 		/* store branch location data.
 		*  For gen:
@@ -143,7 +143,7 @@ function middleTopics() {
 
 		//lftIndt shifts to right colum when i > 3
 		if(i > 3){lftIndt = topTpL + lftIndtA2 + lftIndtB}
-		$(brs[i]).css('top', topDown[i]).css('margin-left', lftIndt);
+		//$(brs[i]).css('top', topDown[i]).css('margin-left', lftIndt);
 	}
 
 	//draw lines connecting topics on canvas.

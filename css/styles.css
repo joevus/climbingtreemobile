@@ -41,9 +41,8 @@ body {
 .topTopic{
 	/*position: absolute;*/
 	text-align: center;
-	margin-left: 10px;
-	width: 355px;
-	margin-top: 55px;
+	margin: auto;
+	max-width: 720px;
 	border-radius: 5px;
 	border: 1px black solid;
 	font-family: 'sofia_prolight';
@@ -88,7 +87,7 @@ body {
 	border-radius: 5px;
 	border: 1px black solid;
 	text-align: center;
-	width: 130px;
+	/*width: 130px;*/
 }
 .wrapCentered {
 	/*position: absolute;*/
