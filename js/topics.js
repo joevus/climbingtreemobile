@@ -75,10 +75,10 @@ function middleTopics() {
 
 	//variables we need
 	var leftColLeftPadding = parseInt($(".leftCol").css("padding-left").replace("px",""));
-	var leftCol = leftColLeftPadding;
+	var leftCol = leftColLeftPadding; //left position of leftCol div
 	var leftIndt = -11; //can't be greater than 15 because padding is only 15.
 	var rightColLeftPadding = parseInt($('.rightCol').css("padding-left").replace("px",""));
-	var rightCol = rightColLeftPadding;
+	var rightCol = rightColLeftPadding; //right position of rightCol div
 	var xLeft = []; //to store x-position of each vertical line, start of horizontal line
 	var xRight = []; //to store x-position of end of each horizontal line
 	var yTop = []; //to store starting y-position of each vertical line
@@ -183,9 +183,6 @@ function middleTopics() {
 
 	//** Calculate points for topic lines
 	function drawLines(){
-		//Get canvas context
-		var canvas = document.getElementById('board');
-		var ctx = canvas.getContext('2d');
 		//Get left column canvas context
 		var canvasL = document.getElementById('canvasL');
 		var ctxL = canvasL.getContext('2d');
