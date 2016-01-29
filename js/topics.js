@@ -74,16 +74,11 @@ function middleTopics() {
 	//** Topic boxes under Science **
 
 	//variables we need
-	var middleRowPos = $(".middleRow").position(); //position of row with sub topics
-	var middleRowTop = middleRowPos.top; //top of row with sub topics, startY
 	var leftColLeftPadding = parseInt($(".leftCol").css("padding-left").replace("px",""));
 	var leftColLeftMar = parseInt($(".leftCol").css("margin-left").replace("px",""));
 	var leftColPos = $(".leftCol").position();
 	var leftCol = leftColLeftPadding;
 	var leftIndt = -11; //can't be greater than 15 because padding is only 15.
-	console.log("leftColLeftPadding: " + leftColLeftPadding);
-	console.log("leftColLeftMar: " + leftColLeftMar);
-	//console.log("leftLeftCol: " + leftLeftCol);
 	var rightColLeftPadding = parseInt($('.rightCol').css("padding-left").replace("px",""));
 	var rightCol = rightColLeftPadding;
 	var rightColPos = $(".rightCol").position(); //position of right column of subtopics
@@ -92,17 +87,6 @@ function middleTopics() {
 	var xRight = []; //to store x-position of end of each horizontal line
 	var yTop = []; //to store starting y-position of each vertical line
 	var yBottom = [];//to store ending y-position of each vertical line, y of horizontal line
-	var leftSpace = 15; //how far left of the left edge of the topic box the horizontal line starts
-
-
-	var topTpL = 10; //left position of topTopic. Set same as left margin
-	var gap = 20; //30 px vertical gap between bottom of previous subtopic and top of next subtopic
-	var lftIndtA1 = 15; //left-indent from top topic left-edge to start of vertical line
-	var lftIndtA2 = 190; //left-indent for sub topics in 2nd column
-	var lftIndtB = 10; //length of horizontal line from vertical line
-	var lftIndt = topTpL + lftIndtA1 + lftIndtB;
-	//   bottom position of topTopic. Top is zero, so add margins, border, padding iwht outerHeight
-	var topTpB = $(".topTopic").outerHeight(true)
 	var topPos = [];// Array to store how far from top each topic box starts
 	var topLeft = []; //Array to store how far from left each topic box starts
 	var brOHs = []; //Array to Store outer height of brs[i]
@@ -168,7 +152,6 @@ function middleTopics() {
 		//else {topDown[i+1] = topDown[i] + brOHs[i] + gap; }
 
 		//lftIndt shifts to right colum when i > 3
-		if(i > 3){lftIndt = topTpL + lftIndtA2 + lftIndtB}
 		$(brs[i]).css('margin-top', '20px');
 
 		//store top position of each subtopic. Add in margin. For line drawing with canvas.
@@ -183,7 +166,6 @@ function middleTopics() {
 			
 		} else {
 			yTop[i] = yBottom[i-2];
-			console.log("inside yTop else:)");
 		}
 		if(i % 2 === 0) {
 			xLeft[i] = leftCol + leftIndt;
