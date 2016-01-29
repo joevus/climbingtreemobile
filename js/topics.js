@@ -74,6 +74,27 @@ function middleTopics() {
 	//** Topic boxes under Science **
 
 	//variables we need
+	var middleRowPos = $(".middleRow").position(); //position of row with sub topics
+	var middleRowTop = middleRowPos.top; //top of row with sub topics, startY
+	var leftColLeftPadding = parseInt($(".leftCol").css("padding-left").replace("px",""));
+	var leftColLeftMar = parseInt($(".leftCol").css("margin-left").replace("px",""));
+	var leftColPos = $(".leftCol").position();
+	var leftCol = leftColLeftPadding;
+	var leftIndt = -13; //can't be greater than 15 because padding is only 15.
+	console.log("leftColLeftPadding: " + leftColLeftPadding);
+	console.log("leftColLeftMar: " + leftColLeftMar);
+	//console.log("leftLeftCol: " + leftLeftCol);
+	var rightColLeftPadding = parseInt($('.rightCol').css("padding-left").replace("px",""));
+	var rightCol = rightColLeftPadding;
+	var rightColPos = $(".rightCol").position(); //position of right column of subtopics
+	var leftRightCol = rightColPos.left;//right position of right column of subtopics
+	var xLeft = []; //to store x-position of each vertical line, start of horizontal line
+	var xRight = []; //to store x-position of end of each horizontal line
+	var yTop = []; //to store starting y-position of each vertical line
+	var yBottom = [];//to store ending y-position of each vertical line, y of horizontal line
+	var leftSpace = 15; //how far left of the left edge of the topic box the horizontal line starts
+
+
 	var topTpL = 10; //left position of topTopic. Set same as left margin
 	var gap = 20; //30 px vertical gap between bottom of previous subtopic and top of next subtopic
 	var lftIndtA1 = 15; //left-indent from top topic left-edge to start of vertical line
@@ -81,9 +102,9 @@ function middleTopics() {
 	var lftIndtB = 10; //length of horizontal line from vertical line
 	var lftIndt = topTpL + lftIndtA1 + lftIndtB;
 	//   bottom position of topTopic. Top is zero, so add margins, border, padding iwht outerHeight
-	var topTpB = $(".topTopic").outerHeight(true) - 1 /*-1 for canvas border, temporary*/;
-	//   Array to store how far from top each topic box starts
-	var topDown = [];
+	var topTpB = $(".topTopic").outerHeight(true)
+	var topPos = [];// Array to store how far from top each topic box starts
+	var topLeft = []; //Array to store how far from left each topic box starts
 	var brOHs = []; //Array to Store outer height of brs[i]
 
 	for(var i = 0; i < count; i++) {
@@ -98,8 +119,7 @@ function middleTopics() {
 		} else {
 			$(brs[i]).appendTo('.middleRow > .rightCol');
 		}
-		
-		console.log("middleTopics i: " + i);
+
 		/* store branch location data.
 		*  For gen:
 		*  2 means smallest branch selected is a small branch,
@@ -140,16 +160,40 @@ function middleTopics() {
 		brOHs[i] = $(brs[i]).outerHeight(true)
 
 		//store how far from top each topic box starts
-		topDown[0] = topTpB + 20;
+		//topDown[0] = topTpB + 20;
+		
 		if(i === count-1) {/*do nothing--avoids putting extra element in topDown array*/}
 		//when i is 4 reset topDown[5] to same as topDown[0].
-		else if(i === 3) {topDown[i+1] = topDown[0]}
-		else {topDown[i+1] = topDown[i] + brOHs[i] + gap; }
+		//else if(i === 3) {topDown[i+1] = topDown[0]}
+		//else {topDown[i+1] = topDown[i] + brOHs[i] + gap; }
 
 		//lftIndt shifts to right colum when i > 3
 		if(i > 3){lftIndt = topTpL + lftIndtA2 + lftIndtB}
-		$(brs[i]).css('top', topDown[i]).css('margin-top', '20px');
-	}
+		$(brs[i]).css('margin-top', '20px');
+
+		//store top position of each subtopic. Add in margin. For line drawing with canvas.
+		var topPosition = $(brs[i]).position();
+		var topMar = parseInt($(brs[i]).css("margin-top").replace("px",""));
+		topPos[i] = topPosition.top + topMar;
+
+		//Line y's and x's
+		yBottom[i] = topPos[i] + brOHs[i] * 0.5;
+		if(i === 0 || i === 1) { 
+			yTop[i] = 0;
+			
+		} else {
+			yTop[i] = yBottom[i-2];
+			console.log("inside yTop else:)");
+		}
+		if(i % 2 === 0) {
+			xLeft[i] = leftCol + leftIndt;
+			xRight[i] = leftCol;
+		} else {
+			xLeft[i] = rightCol + leftIndt;
+			xRight[i] = rightCol;
+		}
+
+	} // end for loop
 
 	//draw lines connecting topics on canvas.
 	drawLines();
@@ -165,31 +209,39 @@ function middleTopics() {
 		//Get canvas context
 		var canvas = document.getElementById('board');
 		var ctx = canvas.getContext('2d');
+		//Make a canvas
+		var canvasL = document.createElement('canvas');
+		canvasL.height = 350;
+		canvasL.style.position ="absolute";
+		$(canvasL).appendTo(".leftCol");
+		var ctxL = canvasL.getContext('2d');
+		//Make a canvas
+		var canvasR = document.createElement('canvas');
+		canvasR.height = 350;
+		canvasR.style.position = "absolute";
+		$(canvasR).appendTo(".rightCol");
+		var ctxR = canvasR.getContext('2d');
 
-		//starting point
-		var startX;
-		var startY = topTpB;
+		for(var i = 0; i < brs.length; i++) {
+			var curCtx;
+			if(i % 2 === 0){
+				curCtx = ctxL;
+			} else {
+				curCtx = ctxR;
+			}
 
-		//line endpoints
-			//every time, the line turns at topDown[i] + .5*brOHs[i]
-		for(var i = 0; i < topDown.length; i++) {
-			ctx.beginPath();
-			if(i === 0) {
-				//startX starts out using lftIndtA1
-				startX = topTpL + lftIndtA1;
-				ctx.moveTo(startX,startY);
-			}
-			else if(i <= 3 || i > 4) {
-				ctx.moveTo(startX,topDown[i-1] + 0.5 * brOHs[i-1]);
-			}
-			else if(i === 4) {
-				//startX shifts to right column when i = 4
-				startX = topTpL + lftIndtA2;
-				ctx.moveTo(startX, startY);
-			}
-			ctx.lineTo(startX, topDown[i] + 0.5 * brOHs[i]);
-			ctx.lineTo(startX + lftIndtB, topDown[i] + 0.5 * brOHs[i])
-			ctx.stroke();
+			curCtx.beginPath();
+			curCtx.moveTo(xLeft[i], yTop[i]);
+			curCtx.lineTo(xLeft[i], yBottom[i]);
+			curCtx.lineTo(xRight[i], yBottom[i]);
+			curCtx.stroke();
+			// console.log("line loop i: " + i);
+			// console.log("xLeft[i]: " + xLeft[i]);
+			// console.log("xRight[i]: " + xRight[i]);
+			// console.log("yTop[i]: " + yTop[i]);
+			// console.log("yBottom[i]: " + yBottom[i]);
+
 		}
+
 	}
 }
