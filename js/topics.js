@@ -80,7 +80,7 @@ function middleTopics() {
 	var leftColLeftMar = parseInt($(".leftCol").css("margin-left").replace("px",""));
 	var leftColPos = $(".leftCol").position();
 	var leftCol = leftColLeftPadding;
-	var leftIndt = -13; //can't be greater than 15 because padding is only 15.
+	var leftIndt = -11; //can't be greater than 15 because padding is only 15.
 	console.log("leftColLeftPadding: " + leftColLeftPadding);
 	console.log("leftColLeftMar: " + leftColLeftMar);
 	//console.log("leftLeftCol: " + leftLeftCol);
@@ -209,17 +209,11 @@ function middleTopics() {
 		//Get canvas context
 		var canvas = document.getElementById('board');
 		var ctx = canvas.getContext('2d');
-		//Make a canvas
-		var canvasL = document.createElement('canvas');
-		canvasL.height = 350;
-		canvasL.style.position ="absolute";
-		$(canvasL).appendTo(".leftCol");
+		//Get left column canvas context
+		var canvasL = document.getElementById('canvasL');
 		var ctxL = canvasL.getContext('2d');
-		//Make a canvas
-		var canvasR = document.createElement('canvas');
-		canvasR.height = 350;
-		canvasR.style.position = "absolute";
-		$(canvasR).appendTo(".rightCol");
+		//Get right column canvas context
+		var canvasR = document.getElementById('canvasR');
 		var ctxR = canvasR.getContext('2d');
 
 		for(var i = 0; i < brs.length; i++) {

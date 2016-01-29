@@ -44,9 +44,7 @@ function topTopicClicked() {
 	}
 
 	//wipe canvas clean
-	var canvas = document.getElementById('board');
-	var ctx = canvas.getContext('2d');
-	ctx.clearRect(0,0, canvas.width, canvas.height);
+	wipeCanvas();
 
 	// remove sub topic boxes
 	$('.subTopic').remove();
@@ -116,7 +114,18 @@ function subTopicClicked() {
 
 function wipeCanvas(){
 	//wipe canvas clean
-	var canvas = document.getElementById('board');
-	var ctx = canvas.getContext('2d');
-	ctx.clearRect(0,0, canvas.width, canvas.height);
+	var canvasL = document.getElementById('canvasL');
+	if(canvasL) {
+		var ctxL = canvasL.getContext('2d');
+		ctxL.clearRect(0,0, canvasL.width, canvasL.height);
+		console.log('blue');
+	}
+	
+	var canvasR = document.getElementById('canvasR');
+	if(canvasR) {
+		var ctxR = canvasR.getContext('2d');
+		ctxR.clearRect(0,0, canvasR.width, canvasR.height);
+		console.log('red');
+	}
+	console.log("I'm wiping the canvas but if my buddies blue and red aren't directly above me it didn't work!");
 }
