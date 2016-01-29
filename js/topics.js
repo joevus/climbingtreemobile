@@ -75,20 +75,15 @@ function middleTopics() {
 
 	//variables we need
 	var leftColLeftPadding = parseInt($(".leftCol").css("padding-left").replace("px",""));
-	var leftColLeftMar = parseInt($(".leftCol").css("margin-left").replace("px",""));
-	var leftColPos = $(".leftCol").position();
 	var leftCol = leftColLeftPadding;
 	var leftIndt = -11; //can't be greater than 15 because padding is only 15.
 	var rightColLeftPadding = parseInt($('.rightCol').css("padding-left").replace("px",""));
 	var rightCol = rightColLeftPadding;
-	var rightColPos = $(".rightCol").position(); //position of right column of subtopics
-	var leftRightCol = rightColPos.left;//right position of right column of subtopics
 	var xLeft = []; //to store x-position of each vertical line, start of horizontal line
 	var xRight = []; //to store x-position of end of each horizontal line
 	var yTop = []; //to store starting y-position of each vertical line
 	var yBottom = [];//to store ending y-position of each vertical line, y of horizontal line
 	var topPos = [];// Array to store how far from top each topic box starts
-	var topLeft = []; //Array to store how far from left each topic box starts
 	var brOHs = []; //Array to Store outer height of brs[i]
 
 	for(var i = 0; i < count; i++) {
