@@ -190,6 +190,13 @@ function middleTopics() {
 		var canvasR = document.getElementById('canvasR');
 		var ctxR = canvasR.getContext('2d');
 
+		//set width and height of canvas elements
+		canvasL.width = $(".leftCol").width();
+		canvasL.height = $(".leftCol").height();
+		canvasR.width = $(".rightCol").width();
+		canvasR.height = $(".rightCol").height();
+		console.log("canvasR.width: " + canvasR.width);
+
 		for(var i = 0; i < brs.length; i++) {
 			var curCtx;
 			if(i % 2 === 0){

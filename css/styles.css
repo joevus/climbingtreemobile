@@ -18,17 +18,8 @@ canvas {
 	top: 0;
 	z-index: -1;
 }
-#board {
-	/*display: block;*/
-	position: absolute;
-	/*margin-left: -15px;*/
-	width: 100%;
-	height: 100%;
-	/*border: 1px solid black;*/
-	background-color: #fbf0fb;
-	/*so cursor on topTopic and grandDadTopic will be pointer, otherwise canvas convers them
-	I think*/
-	z-index: -1;
+.topicRow{
+	margin-bottom: 15px;
 }
 .topic {
 	/*position: absolute;*/
