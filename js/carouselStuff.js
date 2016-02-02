@@ -5,7 +5,7 @@ function loadCarousel(slideData) {
 
 	for( var i = 0; i < slideData.length; i++) {
 		var leaf = slideData[i];
-		var imgSrc = "img/" + leaf.img + ".png";
+		var imgSrc = "img/" + leaf.img + ".PNG";
 		var divItem = document.createElement("div");
 		var divContainer1 = document.createElement("div");
 		var divTitle = document.createElement("div");
