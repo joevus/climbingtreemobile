@@ -85,9 +85,9 @@ function middleTopics() {
 	var yBottom = [];//to store ending y-position of each vertical line, y of horizontal line
 	var topPos = [];// Array to store how far from top each topic box starts
 	var brOHs = []; //Array to Store outer height of brs[i]
+	var brs = []; //Array to store branches;
 
 	for(var i = 0; i < count; i++) {
-		var brs = [];
 		brs[i] = document.createElement("div");
 		brs[i].classList.add("subTopic", "topic");
 		var txt = treePos[i+1].name;
@@ -196,7 +196,8 @@ function middleTopics() {
 		canvasR.width = $(".rightCol").width();
 		canvasR.height = $(".rightCol").height();
 		console.log("canvasR.width: " + canvasR.width);
-
+		
+		//if brs.length is 0, won't go through loop.
 		for(var i = 0; i < brs.length; i++) {
 			var curCtx;
 			if(i % 2 === 0){
