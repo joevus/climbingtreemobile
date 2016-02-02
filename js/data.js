@@ -4,394 +4,140 @@ var treeData = {
 			name: "Science",
 			medBr: {
 				1: {
-					name: "Geeeemology",
-					smBr: {
-						1: {
-							name: "Rocks",
-							leaf: {
-								1: {
-									siteTitle: "Khanacademy",
-									img: "khanacademy",
-									url: "khanacademy.com",
-									descrip: "Learning by friendly videos, set courses, many subjects, and you earn points and badges!"
-								}
-							}
-						},
-						2: {
-							name: "Lava"
-						},
-						3: {
-							name: "Sediment",
-							leaf: {
-								1: {
-									siteTitle: "The Smithsonian",
-									name: "smithsonian.com",
-									img: "smithsonian",
-									descrip: "Home of the famouse museum. Exhibit information, online exhibits, research, education programs."
-								}
-							}
-						}
-					},
+					name: "Space",
 					leaf: {
 						1: {
-							name: "Geeeeology.com",
-							img: "fiverr"
+							siteTitle: "Kerbal Space",
+							img: "kebalspace",
+							url: "kebalspaceprogram.com",
+							descrip: "Well-reviewed computer game for kids to learn about sending rockets to space."
 						}
 					}
 				},
 				2: {
-					name: "Physics secondword?",
-					smBr: {
-						1: {
-							name: "Classical Mechanics"
-						},
-						2: {
-							name: "Electricity & Magnetism"
-						}
-					},
+					name: "Physics",
 					leaf: {
 						1: {
-							name: "Physics.com",
-							img: "adobe"
+							siteTitle: "Veritasium",
+							img: "veritasium",
+							url: "https://www.youtube.com/user/1veritasium",
+							descrip: "A great set of videos that discuss interesting concepts and developments in the field of physics."
 						}
 					}
 				},
 				3: {
 					name: "Biology",
-					smBr: {
+					leaf: {
 						1: {
-							name: "Microbiology"
+							siteTitle: "PhET Interactive Simulations",
+							img: "phetinteractive",
+							url: "http://phet.colorado.edu/en/simulations/category/new",
+							descrip: "Contains helpful simulations for biology, chemistry, physics and other science topics."
 						},
 						2: {
-							name: "Animal Kingdom"
+							siteTitle: "Learn.Genetics",
+							img: "learngenetics",
+							url: "http://learn.genetics.utah.edu/",
+							descrip: "Contains a lot of information about cells and DNA that can help students understand the material better."
 						},
-						3: {
-							name: "Zoooology"
-						}
-					},
-					leaf: {
-						1: {
-							name: "Biology.com"
-						}
 					}
-				},
-				4: {
-					name: "Chemistry",
-					smBr: {
-						1: {
-							name: "General Chemistry"
-						}
-					},
-					leaf: {
-						1: {
-							name: "Chemistry.com"
-						} //end 1
-					} //end leaf
-				},//end 4 (medBr)
-				5: {
-					name: "Environmental Science",
-					smBr: {
-						1: {
-							name: "yup"
-						}
-					},
-					leaf: {
-						1: {
-							name: "yup.com"
-						}
-					}//end leaf
-				},//end 5 (medBr)
-				6: {
-					name: "First and SecondWord",
-					smBr: {
-						1: {
-							name: "yup"
-						}
-					},
-					leaf: {
-						1: {
-							name: "yup.com"
-						}
-					}//end leaf
-				},//end 6 (medBr)
-				7: {
-					name: "Ecology",
-					smBr: {
-						1: {
-							name: "yup"
-						}
-					},
-					leaf: {
-						1: {
-							name: "yup.com"
-						}
-					}//end leaf
-				},//end 7 (medBr)
-				8: {
-					name: "Eight!",
-					smBr: {
-						1: {
-							name: "yup"
-						}
-					},
-					leaf: {
-						1: {
-							name: "yup.com"
-						}
-					}//end leaf
-				}//end 8 (medBr)
+				}
 			},//end medBr
 			leaf: {
 				1: {
+					siteTitle: "Bozemanscience",
+					img: "bozemanscience",
+					url: "http://www.bozemanscience.com/",
+					descrip: "Some amazing tutorials that describe fundamental science concepts. Great for reviewing or if you are learning for the first time."
+				}, // end 2 (leaf)
+				2: {
+					siteTitle: "HomeScienceTools",
+					img: "homesciencetools",
+					url: "http://www.hometrainingtools.com/",
+					descrip: "Home Science Tools is a good resource for home science kits."
+				},
+				3: {
 					siteTitle: "Khanacademy",
 					img: "khanacademy",
 					url: "khanacademy.com",
 					descrip: "Learning by friendly videos, set courses, many subjects, and you earn points and badges!"
-				}, //end 1 (leaf)
-				2: {
-					siteTitle: "Fiverr",
-					img: "fiverr",
-					url: "fiverr.com",
-					descrip: "People offer services such as graphic design and others, for $5."
-				} // end 2 (leaf)
+				}
 			} //end leaf
 		},//end 1 (bigBr)
 		2: { //start bigBr2
 			name: "Technology",
 			medBr: {
-				1: {
-					name: "Computer Science",
-					smBr: {
-						1: {
-							name: "Programming"
-						},
-						2: {
-							name: "Networks"
-						},
-						3: {
-							name: "Hardware"
-						}
-					},
-					leaf: {
-						1: {
-							name: "Geeeeology.com"
-						}
-					}
-				},
-				2: {
-					name: "Information",
-					smBr: {
-						1: {
-							name: "Internet"
-						},
-						2: {
-							name: "Books"
-						}
-					},
-					leaf: {
-						1: {
-							name: "Pysics.com"
-						}
-					}
-				},
-				3: {
-					name: "Aeronautical",
-					smBr: {
-						1: {
-							name: "Space"
-						},
-						2: {
-							name: "In-Earth Flight"
-						},
-						3: {
-							name: "Future of Aeronautical"
-						}
-					},
-					leaf: {
-						1: {
-							name: "Biology.com"
-						}
-					}
-				},
-				4: {
-					name: "Manufacturing",
-					smBr: {
-						1: {
-							name: "Textiles"
-						}
-					},
-					leaf: {
-						1: {
-							name: "whois.com"
-						}
-					}
-				}//end 4 (medBr)
 			},//end medBr
 			leaf: {
 				1: {
-					siteTitle: "Adobe",
-					url: "adobe.com",
-					img: "adobe",
-					descrip: "Lot's of software to do creative things."
+					siteTitle: "Code.org",
+					url: "https://code.org/",
+					img: "codedotorg",
+					descrip: "Code.org is a great place to get kids excited about computer programming and introduce them to basic concepts. It's got Angry Birds and Zombie characters."
 				}
 			}
 		},//end 2 (bigBr)
 		3: { //start bigBr3
 			name: "Engineering",
 			medBr: {
+			},//end medBr
+			leaf: {
 				1: {
-					name: "Mechanical Engineering",
-					smBr: {
-						1: {
-							name: "Structures"
-						},
-						2: {
-							name: "Mechanics"
-						},
-						3: {
-							name: "Design"
-						}
-					},
-					leaf: {
-						1: {
-							name: "Geeeeology.com"
-						}
-					}
-				},
-				2: {
-					name: "Civil Engineering",
-					smBr: {
-						1: {
-							name: "Structures"
-						},
-						2: {
-							name: "Water"
-						}
-					},
-					leaf: {
-						1: {
-							name: "Pysics.com"
-						}
-					}
-				},
-				3: {
-					name: "Chemical Engineering",
-					smBr: {
-						1: {
-							name: "Chemistry"
-						},
-						2: {
-							name: "Processes"
-						},
-						3: {
-							name: "Unit Operations"
-						}
-					},
-					leaf: {
-						1: {
-							name: "Biology.com"
-						}
-					}
-				},
-				4: {
-					name: "Electrical Engineering",
-					smBr: {
-						1: {
-							name: "Circuits"
-						}
-					},
-					leaf: {
-						1: {
-							name: "whois.com"
-						}
-					}
-				}//end 4 (medBr)
-			}//end medBr
+					siteTitle: "JK Brickworks",
+					url: "jkbrickworks.com/",
+					img: "jkbrickworks",
+					descrip: "Awesome Lego models with neat mechanical designs. They have videos, parts lists, and instructions."
+				}
+			}
 		},//end 3 (bigBr)
 		4: { //start bigBr4
 			name: "Math",
 			medBr: {
 				1: {
-					name: "Arithmetic",
-					smBr: {
-						1: {
-							name: "Addition and Subtraction"
-						},
-						2: {
-							name: "Multiplication and Division"
-						}
-					},
+					name: "Geometry",
+					smBr: {},
 					leaf: {
 						1: {
-							name: "Geeeeology.com"
+							siteTitle: "GeoGebra",
+							url: "https://www.geogebra.org/",
+							img: "geogebra",
+							descrip: "This is a great interactive geometry application. Teachers can use it to show geometric proofs, or students can explore geometry concepts."
 						}
 					}
+				}
+			},//end medBr
+			leaf: {
+				1: {
+					siteTitle: "WolframAlpha",
+					url: "http://www.wolframalpha.com/",
+					img: "wolframalpha",
+					descrip: "Enter your math problem in on the search bar and it will solve it for you!"
 				},
 				2: {
-					name: "Algebra 1",
-					smBr: {
-						1: {
-							name: "Negative Numbers"
-						},
-						2: {
-							name: "Solving Equations"
-						}
-					},
-					leaf: {
-						1: {
-							name: "Pysics.com"
-						}
-					}
+					siteTitle: "Desmos",
+					url: "https://www.desmos.com/",
+					img: "desmos",
+					descrip: "This is a great online graphing calculator for displaying functions in class."
 				},
 				3: {
-					name: "Geometry",
-					smBr: {
-						1: {
-							name: "Area"
-						},
-						2: {
-							name: "Angles"
-						},
-						3: {
-							name: "Aquaducts---what?"
-						}
-					},
-					leaf: {
-						1: {
-							name: "Biology.com"
-						}
-					}
+					siteTitle: "Mathispower4u",
+					url: "http://www.mathispower4u.com/",
+					img: "mathispower4u",
+					descrip: "Online math review videos. Very well done."
 				},
 				4: {
-					name: "Fun Math",
-					smBr: {
-						1: {
-							name: "Math Jokes"
-						},
-						2: {
-							name: "Jokes Math"
-						}
-					},
-					leaf: {
-						1: {
-							name: "whois.com"
-						}
-					}
-				},//end 4 (medBr)
+					siteTitle: "Math-Aids",
+					url: "http://www.math-aids.com/",
+					img: "math-aids",
+					descrip: "Math practice worksheets generator"
+				},
 				5: {
-					name: "Pre Algebra",
-					smBr: {
-						1: {
-							name: "Fractions"
-						}
-					},
-					leaf: {
-						1: {
-							name: "whois.com"
-						}
-					}
-				}//end 5 (medBr)
-			}//end medBr
+					siteTitle: "PatrickJMT",
+					url: "http://patrickjmt.com/",
+					img: "patrickjmt",
+					descrip: "A great source for online math review videos."
+				}
+			}
 		},//end 4 (bigBr)
 		5: { //start bigBr5
 			name: "Art",
@@ -485,15 +231,28 @@ var treeData = {
 			}//end medBr
 		}//end 5 (bigBr)
 	},//end bigBr
+	/*Says featured, but for now it contains some resources that cross STEM topic boundaries */
 	featured: {
 		leaf: {
 			1: {
-				siteTitle: "Fiverr",
-				url: "fiverr.com",
-				img: "fiverr",
-				descrip: "People offer services such as graphic design and others, for $5."
+				siteTitle: "Khanacademy",
+				img: "khanacademy",
+				url: "khanacademy.com",
+				descrip: "Learning by friendly videos, set courses, many subjects, and you earn points and badges!"
 			},
 			2: {
+				siteTitle: "IXL",
+				img: "ixl",
+				url: "https://www.ixl.com",
+				descrip: "Used by to quiz her student in areas like science and math."
+			},
+			3: {
+				siteTitle: "Study.com",
+				img: "studydotcom",
+				url: "http://study.com/",
+				descrip: "An system to help you study and learn."
+			},
+			4: {
 				siteTitle: "Simithsonian",
 				url: "smithsonian.com",
 				img: "smithsonian",
