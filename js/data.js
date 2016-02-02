@@ -8,8 +8,8 @@ var treeData = {
 					leaf: {
 						1: {
 							siteTitle: "Kerbal Space",
-							img: "kebalspace",
-							url: "kebalspaceprogram.com",
+							img: "kerbalspace",
+							url: "kerbalspaceprogram.com",
 							descrip: "Well-reviewed computer game for kids to learn about sending rockets to space."
 						}
 					}
